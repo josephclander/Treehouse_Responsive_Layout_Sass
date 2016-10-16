@@ -1,0 +1,49 @@
+.intro p {
+	@include padding-tb(20px,50px);
+	color: $color-text-light;
+
+	@media #{$brk-narrow} {
+		max-width: 50%;
+		display: inline;
+		text-align: left;
+		padding: 0 1em;
+	}
+}
+
+#portfolio {
+	@include padding-tb(50px,40px);
+	@extend %bold;
+	@extend %uppercase;
+}
+
+#portfolio,
+.portfolio-imgs {
+	background-color: $color-bg-base;
+}
+
+#contact {
+	background-color: $color-bg-grey;	
+	@extend %center;
+
+	& p {
+		color: $color-text-light;
+
+		@media #{$brk-narrow} {
+			max-width: 50%;
+			margin: 0 auto;			
+		}
+	}
+
+	& h2 {
+	margin-bottom: 20px;
+	@extend %bold;
+	@extend %uppercase;
+	}
+
+
+	@media #{$brk-narrow} {
+		padding-left: 2em;
+		padding-right: 2em;
+		text-align: center;
+	}
+}

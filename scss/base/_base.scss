@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: $stack-sans-serif; 
+	@include text(1em, $color: $color-text-base);
+	letter-spacing: 0.04em;
+}
+
+h1 {
+	@include text(1.75em, bold);
+	padding: 1em 0;
+}
+
+h2 {
+	@include text(1.125em);
+	padding: 0.5em 0;
+}
+
+p {
+	@include text(1em, $color: $color-text-dark);
+	line-height: 1.6em;
+	@include padding-tb(0.5em,1em);
+}
+
+ul li {
+	@include text($font-weight: bold, $color: $color-text-base);
+	margin: 5px;
+	padding: 10px;
+	background-color: $color-bg-base;
+}
+
+a {
+	text-decoration: none;
+	&:link, 
+	&:visited {
+		color: inherit;
+	}
+}
+
+span {
+	@extend %bold;
+	margin-left: 15px;
+}
+

@@ -1,0 +1,31 @@
+// Descriptive color variables
+
+$black						:#000;
+$white						:#fff;
+$light-grey					:rgb(250,250,250);
+$grey						:rgb(220,220,220);
+$darker-grey				:rgb(170,170,170);
+$darkest-grey				:rgb(90,90,90);
+
+
+// Functional color variables
+
+$color-text-base			:$black;
+$color-text-dark			:$darkest-grey;
+$color-text-light			:$darker-grey;
+
+$color-bg-base				:$white;
+$color-bg-grey				:$light-grey;
+
+$color-border				:$grey;			
+
+
+// Font stack
+
+$stack-sans-serif			:arial, sans-serif;
+
+
+// Media query breakpoints
+
+$brk-narrow					:'(min-width: 768px)';
+$brk-wide					:'(min-width: 1024px)';

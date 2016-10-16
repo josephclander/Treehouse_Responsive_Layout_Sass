@@ -1,0 +1,47 @@
+.navigation {
+		padding-bottom: 2em;
+
+		@media #{$brk-narrow} {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		@media #{$brk-wide} {
+			padding-top: 3em;
+			padding-bottom: 3em;
+			padding-right: 0;
+			line-height: 2em;
+		}
+
+}
+
+.nav-bar {
+	@media #{$brk-wide} {
+		float: right;
+	}
+
+}
+
+.nav-bar ul {
+	@media #{$brk-wide} {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.nav-bar li {
+	@media #{$brk-narrow} {
+		display: inline-block;
+		background-color: inherit;
+	}
+
+	@media #{$brk-wide} {
+		float: left;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		margin-left: 2em;
+	}
+
+}

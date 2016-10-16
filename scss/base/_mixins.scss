@@ -1,0 +1,30 @@
+// Text
+
+@mixin padding-tb($top,$bottom) {
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
+
+@mixin text($font-size: null, $font-weight: null, $color: null) {
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $color;
+}
+
+
+// Media Queries
+
+// I have only used this on some of the media queries 
+// in containers for demonstration as technically no 
+// further space or DRYness has been created by this process
+
+@mixin bp($point) {
+
+	@if $point == $brk-narrow {
+		@media #{$brk-narrow} {@content;}
+	}
+
+	@else if $point == $brk-wide {
+		@media #{$brk-wide} {@content;}
+	}
+}
