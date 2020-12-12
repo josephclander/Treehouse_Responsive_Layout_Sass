@@ -1,52 +1,46 @@
 .wrap {
-	border-top: 1px solid $color-border;
-	@extend %LR-margin;
+  border-top: 1px solid $color-border;
+  @extend %LR-margin;
 
-	@media #{$brk-narrow} {
-		margin-left: 2em;
-		margin-right: 2em;		
-	}
+  @include bp($brk-narrow) {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
 }
 
 footer {
-	@extend %bold;
-	@include padding-tb(2em,2em);
+  @extend %bold;
+  @include padding-tb(2em, 2em);
 }
 
-#stu-name {float: left;} 
+#stu-name {
+  float: left;
+}
 
 #btt {
-	float: right;
+  float: right;
 
-	@media #{$brk-narrow} {
-		display: none;
-	}
+  @include bp($brk-narrow) {
+    display: none;
+  }
 }
-
 
 /******************************
 SWAPPING FOOTER NAVIGATION
 *******************************/
 
 .non_mobile {
-	@media #{$brk-narrow} {
-		display: inline-block;
-		float: right;
-	}
+  @include bp($brk-narrow) {
+    display: inline-block;
+    float: right;
+  }
 }
 
 .non_mobile li {
-	@media #{$brk-narrow} {
-		display: inline-block;
-		margin: 0;
-		padding: 0;
-		margin-left: 1em;
-	}
+  @include bp($brk-narrow) {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-left: 1em;
+  }
 }
-
-
-
-
-
-
-

@@ -1,25 +1,25 @@
 header {
-	background-color: $color-bg-grey;
-	@extend %LR-margin;
-	@extend %center;
+  background-color: $color-bg-grey;
+  @extend %LR-margin;
+  @extend %center;
 
-	@media #{$brk-narrow} {
-		padding-left: 2em;
-		padding-right: 2em;
-		text-align: center;
-	}
+  @include bp($brk-narrow) {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+  }
 }
 
 .name {
-	@media #{$brk-wide} {
-		float: left;
-	}
+  @include bp($brk-wide) {
+    float: left;
+  }
 
-	& h1 {
-		@media #{$brk-wide} {
-			display: inline-block;
-			padding: 0;
-			margin: 0;
-		}
-	}
+  & h1 {
+    @include bp($brk-wide) {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+    }
+  }
 }

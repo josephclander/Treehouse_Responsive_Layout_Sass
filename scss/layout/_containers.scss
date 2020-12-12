@@ -1,93 +1,91 @@
 .intro {
-	@media #{$brk-narrow} {
-		padding-bottom: 65px;
-	}
+  @include bp($brk-narrow) {
+    padding-bottom: 65px;
+  }
 
-	& p {
-		@media #{$brk-narrow} {
-			float: left;
-		}
-	}
+  & p {
+    @include bp($brk-narrow) {
+      float: left;
+    }
+  }
 
-	& img {
-		width: 70%;
+  & img {
+    width: 70%;
 
-		@media #{$brk-narrow} {
-			float: right;
-			max-width: 50%;
-			display: inline;
-			padding-top: 0;
-		}
-	}
+    @include bp($brk-narrow) {
+      float: right;
+      max-width: 50%;
+      display: inline;
+      padding-top: 0;
+    }
+  }
 }
 
 section {
-	@extend %LR-margin;
-	@extend %center;
+  @extend %LR-margin;
+  @extend %center;
 
-	@media #{$brk-narrow} {
-		padding-left: 2em;
-		padding-right: 2em;
-		text-align: center;		
-	}
+  @include bp($brk-narrow) {
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+  }
 }
 
 .portfolio-section {
-	@include bp($brk-narrow) {
-		display: inline-block;
-		float: left;
-		max-width: 50%;
-		padding-left: 1em;
-		padding-right: 1em;
-	}
+  @include bp($brk-narrow) {
+    display: inline-block;
+    float: left;
+    max-width: 50%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 
-	@include bp($brk-wide) {
-		max-width: 33.33333%;
-	}
+  @include bp($brk-wide) {
+    max-width: 33.33333%;
+  }
 
-	&:nth-child(even) {
-		@include bp($brk-narrow) {
-			clear: left;
-		}
+  &:nth-child(even) {
+    @include bp($brk-narrow) {
+      clear: left;
+    }
 
-		@include bp($brk-wide) {
-			clear: none;
-		}
-	}
+    @include bp($brk-wide) {
+      clear: none;
+    }
+  }
 
-	&:nth-child(5n) {
-		@media #{$brk-wide} {
-			clear: left;
-		}
-	} 
+  &:nth-child(5n) {
+    @include bp($brk-wide) {
+      clear: left;
+    }
+  }
 
-	& img {
-		max-width: 100%;
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
+  & img {
+    max-width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 #contact {
-	margin-top: 2em;
-	@include padding-tb(40px,50px);
-	@extend %LR-margin;
+  margin-top: 2em;
+  @include padding-tb(40px, 50px);
+  @extend %LR-margin;
 }
 
 #text {
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .non_mobile {
-	display: none;
+  display: none;
 }
 
-////////// MEDIA QUERIES //////////
-
-@media (min-width: 768px) {
-	.clearfix:after { 
-	   content: " ";
-	   display: table;
-	   clear: both;
-	}
+@include bp($brk-narrow) {
+  .clearfix:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
 }
